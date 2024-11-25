@@ -1,0 +1,77 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Container principal */
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Caixa de texto estilizada como uma placa Mercosul */
+.plate-box {
+    display: inline-block;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 10px;
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+    margin-bottom: 20px;
+}
+
+#plate-input {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    width: 120px;
+    text-align: center;
+    outline: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+/* Botão */
+#check-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#check-button:hover {
+    background-color: #0056b3;
+}
+
+/* Resultado */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333333;
+}
