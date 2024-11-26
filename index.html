@@ -13,7 +13,7 @@
         <div class="card">
             <h1>Identifique a Região da Placa</h1>
             <div class="plate-container">
-                <input type="text" id="plate-input" maxlength="7" placeholder="AAAA0A0">
+                <input type="text" id="placa-input" maxlength="7" placeholder="AAAA0A0" class="placa-input">
             </div>
             <button id="verificar-btn">Verificar Região</button>
         </div>
@@ -22,13 +22,13 @@
         <div class="row">
             <div class="card small">
                 <div class="image-container">
-                    <img src="bandeira-placeholder.png" alt="Bandeira do Estado" id="bandeira-estado">
+                    <img src="bandeira-placeholder.png" alt="Bandeira do Estado" id="bandeira-img">
                 </div>
                 <p>Bandeira do Estado</p>
             </div>
             <div class="card small">
                 <div class="image-container">
-                    <img src="brasao-placeholder.png" alt="Brasão do Estado" id="brasao-estado">
+                    <img src="brasao-placeholder.png" alt="Brasão do Estado" id="brasao-img">
                 </div>
                 <p>Brasão do Estado</p>
             </div>
@@ -37,10 +37,10 @@
         <!-- Quadrado 4: Resultado -->
         <div class="card">
             <h2>Resultado</h2>
-            <p id="resultado-texto"></p>
+            <p id="resultado"></p>
         </div>
         
     </div>
-	<script src="verificar-placa.js"></script>
+    <script src="verificar-placa.js"></script>
 </body>
 </html>

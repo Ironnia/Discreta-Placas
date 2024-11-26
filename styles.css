@@ -80,6 +80,26 @@ body {
     letter-spacing: 7px; /* Espaçamento entre os caracteres */
 }
 
+.placa-input {
+position: absolute;
+    top: 63%; /* Ajuste conforme o posicionamento necessário */
+    left: 0%; /* Ajuste conforme o posicionamento necessário */
+    transform: translateY(-50%);
+    width: 100%; /* Ajuste conforme a largura da área preenchível */
+    height: 100px; /* Altura do campo */
+    font-size: 70px; /* Tamanho do texto */
+    font-family: 'FE Engschrift', sans-serif; /* Fonte similar à da placa */
+    text-transform: uppercase;
+    text-align: center;
+    color: #000000; /* Cor do texto */
+    border: none;
+    background: transparent;
+    outline: none;
+    letter-spacing: 7px; /* Espaçamento entre os caracteres */
+}
+
+
+
 .plate-container {
     background-image: url('placa-mercosul.png'); /* Substitua pelo caminho da sua imagem */
     background-size: contain;
