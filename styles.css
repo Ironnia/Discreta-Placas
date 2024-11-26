@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Corpo */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -15,7 +14,6 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Container principal */
 .container {
     text-align: center;
     background: #ffffff;
@@ -24,33 +22,39 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Título */
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #333333;
 }
 
-/* Caixa de texto estilizada como uma placa Mercosul */
-.plate-box {
-    display: inline-block;
-    border: 2px solid #000000;
-    border-radius: 8px;
-    padding: 10px;
-    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
-    margin-bottom: 20px;
+/* Container da placa */
+.plate-container {
+    position: relative;
+    width: 600px; /* Largura da imagem */
+    height: 200px; /* Altura da imagem */
+    margin: 0 auto 20px;
+    background: url('placa-mercosul.png') no-repeat center center;
+    background-size: contain;
 }
 
+/* Campo de texto transparente */
 #plate-input {
-    font-size: 20px;
+    position: absolute;
+    top: 50%; /* Ajuste com base no local correto da imagem */
+    left: 10%; /* Ajuste com base no local correto da imagem */
+    transform: translateY(-50%);
+    width: 80%; /* Ajuste conforme a largura da área para o texto */
+    height: 50px;
+    font-size: 36px;
     font-family: 'Courier New', Courier, monospace;
-    border: none;
-    width: 120px;
-    text-align: center;
-    outline: none;
-    letter-spacing: 2px;
     text-transform: uppercase;
-    color: #333333;
+    text-align: center;
+    color: #000000;
+    border: none;
+    background: transparent;
+    outline: none;
+    letter-spacing: 8px;
 }
 
 /* Botão */
