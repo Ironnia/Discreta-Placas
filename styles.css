@@ -14,7 +14,7 @@ body {
 
 @font-face {
     font-family: 'FE Engschrift';
-    src: url('Fonte de letras/FE-Engschrift.ttf') format('truetype'); /* Ajuste o caminho se necessário */
+    src: url('fonte/FE-Engschrift.ttf') format('truetype'); /* Ajuste o caminho se necessário */
     font-weight: normal;
     font-style: normal;
 }
