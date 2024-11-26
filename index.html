@@ -1,20 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Identificador de Placas Mercosul</title>
+    <title>Identifique a Região da Placa</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Identifique a Região da Placa</h1>
-        <div class="plate-container">
-            <input type="text" id="plate-input" maxlength="7" placeholder="AAA0A00">
+
+        <!-- Quadrado 1: Placa -->
+        <div class="card">
+            <h1>Identifique a Região da Placa</h1>
+            <div class="plate-container">
+                <input type="text" id="plate-input" maxlength="7" placeholder="AAAA0A0">
+            </div>
+            <button id="verificar-btn">Verificar Região</button>
         </div>
-        <button id="check-button">Verificar Região</button>
-        <div id="result"></div>
+
+        <!-- Quadrado 2 e 3: Bandeira e Brasão -->
+        <div class="row">
+            <div class="card small">
+                <div class="image-container">
+                    <img src="bandeira-placeholder.png" alt="Bandeira do Estado" id="bandeira-estado">
+                </div>
+                <p>Bandeira do Estado</p>
+            </div>
+            <div class="card small">
+                <div class="image-container">
+                    <img src="brasao-placeholder.png" alt="Brasão do Estado" id="brasao-estado">
+                </div>
+                <p>Brasão do Estado</p>
+            </div>
+        </div>
+
+        <!-- Quadrado 4: Resultado -->
+        <div class="card">
+            <h2>Resultado</h2>
+            <p id="resultado-texto"></p>
+        </div>
+        
     </div>
-    <script src="script.js"></script>
+	<script src="verificar-placa.js"></script>
 </body>
 </html>
