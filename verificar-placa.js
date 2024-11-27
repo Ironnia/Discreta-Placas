@@ -56,9 +56,12 @@ const bandeiraImg = document.getElementById("bandeira-img");
 // Função para verificar o estado com base na placa
 function verificarPlaca() {
     const placa = placaInput.value.trim().toUpperCase();
-    if (placa.length !== 7) {
-        resultadoDiv.textContent = "Por favor, insira uma placa completa com 7 caracteres.";
-        atualizarImagens("placeholder");
+
+    // Validação do formato da placa
+    const regex = /^[A-Z]{3}[0-9][A-Z][0-9]{2}$/;
+    if (!regex.test(placa)) {
+        resultadoDiv.textContent = "Formato de placa inválido. Use: AAA0A00.";
+        atualizarImagens("naoTem");
         return;
     }
 

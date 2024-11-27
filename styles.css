@@ -1,7 +1,7 @@
 /* Reset básico */
 @font-face {
     font-family: 'FE Engschrift';
-    src: url('./Fontes/FE-Engschrift.ttf') format('truetype');
+    src: url('./Fontes/FE-Engschrift.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
