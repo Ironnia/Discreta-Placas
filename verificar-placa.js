@@ -1,14 +1,24 @@
 // Mapeamento das sequências alfabéticas para os estados
 const estados = {
     "saoPaulo": [
-        "BFA", "GKI", "QSN", "QSZ"
+        { inicio: "BFA", fim: "GKI" },
+        { inicio: "QSN", fim: "QSZ" }
     ],
     "espiritoSanto": [
-        "RBA", "RBJ", "QRB", "QRM", "PPA", "PPZ", "OYD", "OYK", "OVH", "OVL",
-        "OVE", "OVF", "OCV", "ODT", "MOX", "MTZ", "RQM", "RQV"
+        { inicio: "RBA", fim: "RBJ" },
+        { inicio: "QRB", fim: "QRM" },
+        { inicio: "PPA", fim: "PPZ" },
+        { inicio: "OYD", fim: "OYK" },
+        { inicio: "OVH", fim: "OVL" },
+        { inicio: "OVE", fim: "OVF" },
+        { inicio: "OCV", fim: "ODT" },
+        { inicio: "MOX", fim: "MTZ" },
+        { inicio: "RQM", fim: "RQV" }
     ],
     "rioDeJaneiro": [
-        "RIO", "RIP", "RKV", "KMF", "LVE"
+        { inicio: "RIO", fim: "RIO" },
+        { inicio: "RIP", fim: "RKV" },
+        { inicio: "KMF", fim: "LVE" }
     ]
 };
 
@@ -56,8 +66,11 @@ function verificarPlaca() {
     let estadoEncontrado = "naoTem";
 
     // Procura o estado correspondente
-    for (const estado in estados) {
-        if (estados[estado].some(seq => letrasPlaca >= seq.slice(0, 3) && letrasPlaca <= seq.slice(seq.length - 3))) {
+    for (const [estado, intervalos] of Object.entries(estados)) {
+        if (intervalos.some(intervalo =>
+            letrasPlaca.localeCompare(intervalo.inicio) >= 0 &&
+            letrasPlaca.localeCompare(intervalo.fim) <= 0
+        )) {
             estadoEncontrado = estado;
             break;
         }
