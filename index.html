@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identifique a Região da Placa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Quadrado 1: Placa -->
+        <div class="card">
+            <h1>Identifique a Região da Placa</h1>
+            <div class="plate-container">
+                <input type="text" id="placa-input" maxlength="7" placeholder="AAA0A00" class="placa-input">
+            </div>
+            <button id="verificar-btn">Verificar Região</button>
+        </div>
+
+        <!-- Quadrado 2 e 3: Bandeira e Brasão -->
+        <div class="row">
+            <div class="card small">
+                <div class="image-container">
+                    <img src="Imagens/bandeira-placeholder.png" alt="Bandeira do Estado" id="bandeira-img">
+                </div>
+                <p>Bandeira do Estado</p>
+            </div>
+            <div class="card small">
+                <div class="image-container">
+                    <img src="Imagens/brasao-placeholder.png" alt="Brasão do Estado" id="brasao-img">
+                </div>
+                <p>Brasão do Estado</p>
+            </div>
+        </div>
+
+        <!-- Quadrado 4: Resultado -->
+        <div class="card">
+            <h2>Resultado</h2>
+            <p id="resultado"></p>
+        </div>
+        
+    </div>
+    <script src="verificar-placa.js"></script>
+</body>
+</html>
