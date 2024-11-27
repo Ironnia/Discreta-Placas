@@ -14,10 +14,11 @@ body {
 
 @font-face {
     font-family: 'FE Engschrift';
-    src: url('./FE-Engschrift.ttf') format('truetype'); /* Ajuste o caminho se necessário */
+    src: url('../FE-Engschrift.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 
 /* Contêiner principal */
 .container {
