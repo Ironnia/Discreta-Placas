@@ -66,6 +66,15 @@ function verificarPlaca() {
     }
 
     const letrasPlaca = placa.slice(0, 3); // Pega as três primeiras letras
+    const numerosPlaca = placa.slice(3);  // Pega o restante da placa
+
+    // Verifica se o restante da placa segue o formato esperado (LETRA NÚMERO NÚMERO)
+    if (!/^[0-9][A-Z][0-9]{2}$/.test(numerosPlaca)) {
+        resultadoDiv.textContent = "Formato de placa inválido. Use: AAA0A00.";
+        atualizarImagens("naoTem");
+        return;
+    }
+
     let estadoEncontrado = "naoTem";
 
     // Procura o estado correspondente
